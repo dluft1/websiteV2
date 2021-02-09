@@ -1,0 +1,23 @@
+
+@font-face {
+    font-family: orca;
+    src: url("../fonts/OCRAEXT.TTF");
+}
+
+body {
+    font-family: orca;
+}
+
+.testingBorder {
+    border: 1px solid red;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.boxes {
+
+    border-radius: 25px 25px 25px 25px;
+}
