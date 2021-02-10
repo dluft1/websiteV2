@@ -21,3 +21,9 @@ a {
 
     border-radius: 25px 25px 25px 25px;
 }
+
+.header {
+    position: sticky;
+    top: 0;
+    width:100%;
+}
