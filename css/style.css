@@ -27,3 +27,12 @@ a {
     top: 0;
     width:100%;
 }
+
+.subheader {
+    position: sticky;
+    top: 86px;
+}
+
+html {
+    scroll-padding-top: 160px;
+}
