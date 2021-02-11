@@ -12,14 +12,39 @@ body {
     border: 1px solid red;
 }
 
+.scrollingProjects {
+    width: 1360px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: inline-block;
+
+}
+
+.card {
+    
+    display: inline-block;
+}
+
 a {
     text-decoration: none;
 }
 
-
-.boxes {
-
+.boxes {  
+    display: inline-block;
+    width: 650px;
     border-radius: 25px 25px 25px 25px;
+    height: 800px;
+}
+
+.arrows {
+    text-align: right;
+}
+
+.innerBox {
+    width: 625px;
+    height: 700px;
+    overflow-y: scroll;  
 }
 
 .header {
@@ -36,3 +61,26 @@ a {
 html {
     scroll-padding-top: 160px;
 }
+
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: black gray;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+    padding-top: 20px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    display: none;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 20px;
+    padding-top: 20px;
+  }
