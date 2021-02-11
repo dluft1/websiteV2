@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+        .scrolling-wrapper {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+        }
+
+        .scrolling-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+
+        .card {
+            display: inline-block;
+            width: 300px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="slide">sadfsdafasdf</div>>
+    <div class="scrolling-wrapper" id="testing">
+        <div class="card">
+            <h2>Card</h2>
+        </div>
+        <div class="card">
+            <h2>Card</h2>
+        </div>
+        <div class="card">
+            <h2>Card</h2>
+        </div>
+        <div class="card">
+            <h2>Card</h2>
+        </div>
+        <div class="card">
+            <h2>Card</h2>
+        </div>
+        <div class="card">
+            <h2>Card</h2>
+        </div>
+        <div class="card">
+            <h2>Card</h2>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--
+<script>
+    const button = document.getElementById('slide');
+    var div = document.getElementById("testing");
+    div.scrollTop = 0;
+        div.scrollLeft = 0;
+
+    button.addEventListener("click", function () {
+        
+        var div = document.getElementById("testing")
+
+        
+        div.scrollLeft += 10;
+        console.log("we go into the scroll");
+    })
+</script>
+-->
+<script>
+    $(document).ready(function () {
+        $("#slide").on('click', function () {
+            $('.scrolling-wrapper').animate({
+                scrollLeft: "+=100"
+            }, 800);
+        }
+        );
+    });
+</script>
+
+</html>

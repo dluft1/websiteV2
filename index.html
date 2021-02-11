@@ -6,27 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Darius Luft</title>
 </head>
 
 <body class="bg-dark">
-    <div class="container-fluid header bg-secondary py-3 text-light">
+    <div class="container-fluid header bg-secondary py-3 text-light border-bottom-dark">
         <div class="row align-items-start">
             <div class="col-sm-auto ps-4">
-                <img src="images/logo.png" alt="DariusLuft">
+                <a href="#home">
+                    <img src="images/logo.png" alt="DariusLuft">
+                </a>
             </div>
-            <div class="col-sm-2 text-left pt-2">
-                <h2>Darius Luft</h2>
+            <div class="col-sm-2 text-left pt-2 ">
+                <a href="#home" class="text-light">
+                    <h2>Darius Luft</h2>
+                </a>
             </div>
-            <div class="col-lg pt-3 text-decoration-none px-5 text-end">
+            <div class="col-lg pt-3 text-decoration-none px-5 text-end ">
                 <strong><a href="#contact" class="text-reset">Contact</a></strong>
             </div>
         </div>
     </div>
-    <div class="bg-light header">
-        <div class="container-fluid ms-5">
+    <div class="bg-light subheader border-bottom border-secondary">
+        <div class=" container-fluid ms-5">
             <div class="row ps-5">
 
                 <div class="col-sm-auto me-4">
@@ -36,12 +40,12 @@
                 </div>
                 <div class="col-sm-auto me-4">
                     <strong>
-                        <a href="#education " class="text-dark">Education</a>
+                        <a href="#projects" class="text-dark">Projects</a>
                     </strong>
                 </div>
                 <div class="col-sm-auto me-4">
                     <strong>
-                        <a href="#projects" class="text-dark">Projects</a>
+                        <a href="#education " class="text-dark">Education</a>
                     </strong>
                 </div>
                 <div class="col-sm-auto me-4">
@@ -53,7 +57,7 @@
         </div>
     </div>
     <div class="container text-light mt-5">
-        <div class="about  about p-4 " id="about">
+        <div class="about  about p-4 mb-5" id="about">
             <h2>Hello, my name is Darius Luft</h2>
             <h5>... and I make cool stuff!</h5><br />
             <p>
@@ -66,58 +70,187 @@
             </p>
         </div>
     </div>
-    <div class="container-fluid text-dark mt-4">
+    <div class="container-fluid text-dark my-5">
+        <div class="container mb-4">
+            <h2 class="text-light ps-4"><strong>PROJECTS</strong></h2>
+        </div>
+
         <div class="row d-flex justify-content-center">
-            <div class="col-md-4 bg-light mx-5 boxes p-2 ">
-                <h3>inHouse</h3>
-                (formerly 'The Snooty Fox Menu App')
-                <p>
-                    A hybrid app created from the hardships of COVID-19.<br />
-                    An food app that allows customers to order take-out for curbside pickup,
-                    and for ordering food and drinks while with a restaurant. This would alleviate some
-                    converns regarding social distancing and the spread of COVID-19.
-                </p>
-                <div class="container">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-auto p-1">
-                            <img src="images/projects/inhouse/menu-app-screenshot1-thumb.png" alt="thumb1">
-                        </div>
-                        <div class="col-auto p-1">
-                            <img src="images/projects/inhouse/menu-app-screenshot2-thumb.png" alt="thumb2">
-                        </div>
-                        <div class="col-auto p-1">
-                            <img src="images/projects/inhouse/menu-app-screenshot3-thumb.png" alt="thumb3">
+            <div class="col-md-1 align-bottom text-light arrows">
+                <img src="images/moveLeft.png" alt="left" id="scrollRight">
+            </div>
+            <div class="px-0 scrollingProjects" id="scrollingProjects">
+                <div class="col-sm-auto bg-light mx-0 py-4 px-3 boxes">
+                    <div class="innerBox">
+                        <h3><strong>inHouse</strong></h3>
+                            (formerly 'The Snooty Fox Menu App')
+                            <p>
+                                A hybrid app created from the hardships of COVID-19.<br />
+                                A food app that allows customers to order take-out for<br/> 
+                                curbside pickup, and for ordering food and drinks while<br/>
+                                with a restaurant. This would alleviate some converns<br/>
+                                regarding social distancing and the spread of COVID-19.<br />
+                                This app follows the design of popular ordering apps such<br/>
+                                as Skip the Dishes and Uber Eats. It was created this way<br />
+                                for ease of use for users, giving them a farmilar interface.
+                            </p>
+                        <div class="container mt-5">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-auto p-1">
+                                    <img src="images/projects/inhouse/menu-app-screenshot1-thumb.png" alt="thumb1">
+                                </div>
+                                <div class="col-auto p-1">
+                                    <img src="images/projects/inhouse/menu-app-screenshot2-thumb.png" alt="thumb2">
+                                </div>
+                                <div class="col-auto p-1">
+                                    <img src="images/projects/inhouse/menu-app-screenshot3-thumb.png" alt="thumb3">
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col">
+                                    <h3>Languages & Technology Used:</h3>
+                                    <ul>
+                                        <li>mySQL (menu, accounts, orders)</li>
+                                        <li>Ionic (for Hybrid Wrapper)</li>
+                                        <li>Java (for Android)</li>
+                                        <li>HTML & CSS</li>
+                                        <li>JavaScript</li>
+                                        <li>jQuery</li>
+                                        <li>React</li>
+                                        <li>PHP</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-auto">
-                            <img src="images/logos/java.png" alt="Java">
-                            <img src="images/logos/css-html.png" alt="css-html">
-                            <img src="images/logos/javascript.png" alt="JavaScript">
-                            <img src="images/logos/jquery.png" alt="jQuery">
-                            <img src="images/logos/react.png" alt="React">
-                            <img src="images/logos/ionic.png" alt="Ionic">
-                            <img src="images/logos/php.png" alt="php">
-                            <img src="images/logos/mysql.png" alt="mySQL">
+                </div>
+                <div class="bg-light mx-5 py-4 px-3 pl-2 boxes">
+                    <div class="innerBox">
+                        <h3><strong>inHouse Manager</strong></h3>
+                        <p>
+                            A hybrid app to be used in accordance with Inhouse regular<br/> app.
+                            This app allowed the staff of a restaurant to manage <br/>
+                            the orders made by customers.<br />
+                        </p>
+                        <p>
+                            <strong>Features</strong><br />
+                        <ul>
+                            <li>View orders recieved</li>
+                            <li>Mark orders as active</li>
+                            <li>View all active orders</li>
+                            <li>View filtered active orders</li>
+                            <li>Mark orders as completed</li>
+                            <li>Search all orders (received, active, completed)</li>
+                            <li>Summary of orders based on filtered criteria:</li>
+                            <ul>
+                                <li>Account</li>
+                                <li>Order #</li>
+                                <li>Date</li>
+                                <li>Table #</li>
+                                <li>Total price</li>
+                            </ul>
+                            <li>GUI that allows managers to easily edit database</br> information</li>
+                            <ul>
+                                <li>Edit menu item</li>
+                                <li>Add new menu item</li>
+                                <li>Delete menu item</li>
+                                <li>Upload images for menu items</li>
+                            </ul>
+                        </ul>
+
+                        </p>
+                        <div class="row-sm-auto mt-5">
+                            <div class="col">
+                                <h3>Languages & Technology Used:</h3>
+                                <ul>
+                                    <li>mySQL (menu, accounts, orders)</li>
+                                    <li>Ionic (for Hybrid Wrapper)</li>
+                                    <li>Java (for Android)</li>
+                                    <li>HTML & CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>jQuery</li>
+                                    <li>React</li>
+                                    <li>PHP</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="bg-light mx-0 pr-5 py-4 px-3 boxes">
+                    <div class="innerBox"></div>
                 </div>
             </div>
-            <div class="col-md-4 bg-light text-dark mx-5 boxes">
-                <h3></h3><br />
-                <div class="row">
-                    <div class="col text-center">
-                       
-                    </div>
-                </div>
+            <div class="col-md-auto text-light">
+                <img src="images/moveRight.png" alt="right" id="scrollLeft">
             </div>
         </div>
     </div>
+    <div class="container my-5 ">#Darius #DariusLuft #Programing #Programmer #FrontEnd #BackEnd #Developer </div>
+    <div class="container-fluid my-5 bg-secondary py-3 border-top border-light">
+        <div class="container text-light mb-5">
+            <h2 class="text-light mt-5"><strong>EDUCATION</strong></h2>
+            <h3 class="text-light">Mohawk College</h3>
+
+            January 2018 - December 2021<br />
+            <p class="p-2"></p>
+            <h3>Sotware Development</h3>
+            </p>
+
+            <table class="table table-striped table-dark mt-4 rounded">
+                <thead>
+                    <tr>
+                        <th scope="col">Programming Languages</th>
+                        <th scope="col">Scripting / Markup</th>
+                        <th scope="col">Frameworks / Libraries</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">
+                            <ul class="list-group mt-2 mx-2">
+                                <li class="list-group-item list-group-item-dark">Python</li>
+                                <li class="list-group-item list-group-item-dark">Java</li>
+                                <li class="list-group-item list-group-item-dark">C#</li>
+                                <li class="list-group-item list-group-item-dark">SQL</li>
+                            </ul>
+                        </td>
+                        <td scope="row">
+                            <ul class="list-group mt-2 mx-2">
+                                <li class="list-group-item list-group-item-dark">HTML & CSS</li>
+                                <li class="list-group-item list-group-item-dark">JavaScript</li>
+                                <li class="list-group-item list-group-item-dark">JQuery</li>
+                                <li class="list-group-item list-group-item-dark">PHP</li>
+                            </ul>
+                        </td>
+                        <td scope="row">
+                            <ul class="list-group mt-2 mx-2">
+                                <li class="list-group-item list-group-item-dark">Bootstrap</li>
+                                <li class="list-group-item list-group-item-dark">React</li>
+                                <li class="list-group-item list-group-item-dark">Google Analytics</li>
+                                <li class="list-group-item list-group-item-dark">Selenium Testing</li>
+                                <li class="list-group-item list-group-item-dark mb-2">Bing Maps Enterprise Framework
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- 
+        <div class="subfooter bg-light mt-5">footer information</div>
+        <div class="footer bg-secondary pb-5">
+            <img src="images/logos/linkedin-icon-mini.png" alt="linkedIn">
+            <img src="images/logos/gitHub-icon-mini.png" alt="gitHub">
+            <img src="images/logos/mail-icon-mini.png" alt="email">
+        </div>
+    -->
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
