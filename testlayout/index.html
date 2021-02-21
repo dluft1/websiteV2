@@ -1,0 +1,298 @@
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+        @font-face {
+            font-family: orca;
+            src: url("../fonts/OCRAEXT.TTF");
+        }
+
+        body {
+            font-family: orca;
+        }
+
+        .projectsContent>.row {
+            display: block;
+            overflow-x: hidden;
+            white-space: nowrap;
+        }
+
+        .projectsContent>.row>.col-sm-12 {
+            display: inline-block;
+            float: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .projectCard {
+            height: 800px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        h2 {
+            display: inline-block;
+        }
+
+        .arrowBox {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .arrowLeft {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        /* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: black gray;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+    padding-top: 20px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    display: none;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 20px;
+    padding-top: 20px;
+  }
+    </style>
+</head>
+
+<body class="bg-dark">
+    <div class="container-fluid bg-secondary text-light border-bottom-dark mr-0">
+        <div class="row">
+            <div class="col-sm-11 py-2">
+                <a href="#home" class="text-light text-decoration-none">
+                    <img src="images/logo.png" alt="DariusLuft">
+                    <h2>Darius Luft</h2>
+                </a>
+            </div>
+            <div class="col-sm-1 text-end">
+                Contact
+            </div>
+        </div>
+        <div class="row bg-light text-dark">
+            <div class="col-sm-auto me-4">
+                <strong>
+                    <a href="#about" class="text-dark text-decoration-none">About</a>
+                </strong>
+            </div>
+            <div class="col-sm-auto me-4">
+                <strong>
+                    <a href="#projects" class="text-dark text-decoration-none">Projects</a>
+                </strong>
+            </div>
+            <div class="col-sm-auto me-4">
+                <strong>
+                    <a href="#media" class="text-dark text-decoration-none">Media</a>
+                </strong>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-light">
+        <div class="container about p-4 mb-5" id="about">
+            <h2>Hello, my name is Darius Luft</h2>
+            <h5>... and I make cool stuff!</h5><br />
+            <p>
+                I have always had a passion and love for technology and creating things, I decided to mix those two
+                together and here we are. <br>
+                I am also a big fan of puzzles, drawing, reading, taking things apart, putting them back together
+                and trying to make to do something they neccessarily aren't design to do. I just
+                find it really fun to see what I can do and am very happy fixing broken things (or trying
+                to break them).
+            </p>
+            <p> Current enrolled in Mohawk College studying software Development (course code 559).</p>
+            <table class="table table-striped table-dark mt-4 rounded">
+                <thead>
+                    <tr>
+                        <th scope="col">Programming Languages</th>
+                        <th scope="col">Scripting / Markup</th>
+                        <th scope="col">Frameworks / Libraries</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">
+                            <ul class="list-group mt-2 mx-2">
+                                <li class="list-group-item list-group-item-dark">Python</li>
+                                <li class="list-group-item list-group-item-dark">Java</li>
+                                <li class="list-group-item list-group-item-dark">C#</li>
+                                <li class="list-group-item list-group-item-dark">SQL</li>
+                            </ul>
+                        </td>
+                        <td scope="row">
+                            <ul class="list-group mt-2 mx-2">
+                                <li class="list-group-item list-group-item-dark">HTML & CSS</li>
+                                <li class="list-group-item list-group-item-dark">JavaScript</li>
+                                <li class="list-group-item list-group-item-dark">JQuery</li>
+                                <li class="list-group-item list-group-item-dark">PHP</li>
+                            </ul>
+                        </td>
+                        <td scope="row">
+                            <ul class="list-group mt-2 mx-2">
+                                <li class="list-group-item list-group-item-dark">Bootstrap</li>
+                                <li class="list-group-item list-group-item-dark">React</li>
+                                <li class="list-group-item list-group-item-dark">Google Analytics</li>
+                                <li class="list-group-item list-group-item-dark">Selenium Testing</li>
+                                <li class="list-group-item list-group-item-dark mb-2">Bing Maps Enterprise Framework
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container text-light ps-5 my-4">
+        <h1>Personal Projects</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-2 text-light justify-content-end arrowLeft">
+            <img src="images/moveLeft.png" id="scrollLeft">
+        </div>
+        <div class="col-sm-8">
+            <div class="container projectsContent mx-0">
+                <div class="row" id="scrollProjects">
+
+                    <div class="col-sm-12 col-md-12 col-lg-6 projectCard align-top mx-0 px-0 bg-light rounded">
+                        <h3><strong>inHouse</strong></h3>
+                        (formerly 'The Snooty Fox Menu App')
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12">
+                                <p>
+                                    A hybrid app created from the hardships of COVID-19.<br />
+                                    A food app that allows customers to order take-out for<br />
+                                    curbside pickup, and for ordering food and drinks while<br />
+                                    with a restaurant. This would alleviate some converns<br />
+                                    regarding social distancing and the spread of COVID-19.</br>
+                                    This app follows the design of popular ordering apps such<br />
+                                    as Skip the Dishes and Uber Eats. It was created this way<br />
+                                    for ease of use for users, giving them a farmilar interface.<br />
+                                </p>
+                                <h3>Languages & Technology Used:</h3>
+                                <ul>
+                                    <li>mySQL (menu, accounts, orders)</li>
+                                    <li>Ionic (for Hybrid Wrapper)</li>
+                                    <li>Java (for Android)</li>
+                                    <li>HTML & CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>jQuery</li>
+                                    <li>React</li>
+                                    <li>PHP</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4 col-md-12">
+                                <div class="row justify-content-center">
+                                    <div class="col-sm-3 p-1">
+                                        <img src="images/projects/inhouse/menu-app-screenshot1-thumb.png" alt="thumb1">
+                                    </div>
+                                    <div class="col-sm-3 p-1">
+                                        <img src="images/projects/inhouse/menu-app-screenshot2-thumb.png" alt="thumb2">
+                                    </div>
+                                    <div class="col-sm-3 p-1">
+                                        <img src="images/projects/inhouse/menu-app-screenshot3-thumb.png" alt="thumb3">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col mt-5">
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6 align-top projectCard mx-0 px-0 bg-light rounded">
+                        <h3><strong>inHouse Manager</strong></h3>
+                        <p>
+                            A hybrid app to be used in accordance with Inhouse regular<br/> app.
+                            This app allowed the staff of a restaurant to manage <br/>
+                            the orders made by customers.<br />
+                        </p>
+                        <p>
+                            <strong>Features</strong><br />
+                        <ul>
+                            <li>View orders recieved</li>
+                            <li>Mark orders as active</li>
+                            <li>View all active orders</li>
+                            <li>View filtered active orders</li>
+                            <li>Mark orders as completed</li>
+                            <li>Search all orders (received, active, completed)</li>
+                            <li>Summary of orders based on filtered criteria:</li>
+                            <ul>
+                                <li>Account</li>
+                                <li>Order #</li>
+                                <li>Date</li>
+                                <li>Table #</li>
+                                <li>Total price</li>
+                            </ul>
+                            <li>GUI that allows managers to easily edit database</br> information</li>
+                            <ul>
+                                <li>Edit menu item</li>
+                                <li>Add new menu item</li>
+                                <li>Delete menu item</li>
+                                <li>Upload images for menu items</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6 projectCard align-top mx-0 px-0 bg-light rounded">
+                        Card Three
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2 text-light m-0 arrowBox" >
+            <img src="images/moveRight.png" class="text-align-center" id="scrollRight">
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            console.log("page loaded");
+
+
+            var scrollWidth = $(".projectCard").width();
+            console.log(scrollWidth);
+            $("#scrollLeft").on('click', function () {
+
+                var start = $("#scrollProjects").scrollLeft();
+                console.log(start);
+                $("#scrollProjects").animate({
+                    scrollLeft: start - 10 - scrollWidth
+                }, 100);
+            });
+
+            $("#scrollRight").on('click', function () {
+                var start = $("#scrollProjects").scrollLeft();
+                console.log(start);
+                $("#scrollProjects").animate({
+                    scrollLeft: start + 10 + scrollWidth
+                }, 100);
+            });
+
+        });
+    </script>
+</body>
+
+</html>
